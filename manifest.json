@@ -11,13 +11,17 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+		"https://*/*",
+    "http://*/*",
+    "tabs"
   ],
   "content_scripts": [
 		{
 			"css": ["styles.css"],
     	"js": ["content.js"],
-    	"matches": ["http://*/*"]
+    	"matches": ["http://*/*", "http://*/*"],
+			"all_frames": true
   	}
 	]
 }

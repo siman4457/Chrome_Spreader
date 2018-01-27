@@ -1,10 +1,18 @@
 
-//Initial Testing Code
-chrome.tabs.query({'active': true}, function() {
-  var x = document.getElementsByTagName("p");
-	
-	for (var i = 0, l = images.length; i < l; i++) {
-		x[i].innerHTML = "yeah";
-	}
 
-});
+console.log("Test")
+
+var x = document.getElementsByTagName('p');
+console.log("p items: ", x);
+
+for(i = 0; i < x.length; i++){
+	let thing = x[i];
+	console.log(thing);
+	if(thing.innerHTML) {
+		x[i].innerHTML = "test";
+	}
+}
+
+		
+
+
