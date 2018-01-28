@@ -12,9 +12,18 @@ html, body {
 }
 
 p {
-	display:inherit!important;
+	display:block!important;
 }
 
+i {
+	display:inherit!important;
+}
+/*
+a,h*{
+	display:inherit!important;
+
+}
+*/
 .main  {
 	display:inherit!important;
 
@@ -71,7 +80,7 @@ p {
   position: relative;
   box-shadow: 2px 2px 50px 5px;
   background-color: white;
-
+  height: auto;
   width: 55%;
   border-radius: 10px;
   margin: 0 auto;
@@ -81,11 +90,9 @@ p {
   text-align: justify;
   top: 240px;
 
-
 }
 
 .supporting .text {
 	display:inherit!important;
-  padding: 40px 40px 100px 40px;
-	height: auto;
+  padding: 40px 40px 40px 40px;
 }
