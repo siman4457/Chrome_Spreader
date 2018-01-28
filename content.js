@@ -91,7 +91,6 @@ for(i = 0; i < article_text.length; i++){
 	var par_string = article_text[i].innerHTML;
 	for (j = 0; j < par_string.length; j++){
  		Array_Words.push(par_string.split(" "));
-
 	}
 }
 */
@@ -126,7 +125,6 @@ function printToScreen(){
 			main.style.display = "none";
 			main.style.display = "inherit";
 }
-
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
@@ -135,105 +133,42 @@ function sleep(milliseconds) {
     }
   }
 }
-
 */
 var inner =0;
 var outer =0;
+var pressed = false;
+var Timer;
+
+PlayPause.onclick = function(event){
+    console.log("click")
+    pressed = !pressed;
+    startTextScroll();
+};
+
+function startTextScroll() {
+    if (pressed){
+
+        Timer = setInterval(function(){
+            if(outer >= Array_Words.length){
+                // We're done
+                clearInterval(Timer);
+                return;
+            }
 
 
-var Timer = setInterval(function(){
-	if(outer >= Array_Words.length){
-		// We're done
-		clearInterval(Timer);
-		return;
-	}
+            var currWordGroup = Array_Words[outer];
+            if(inner < currWordGroup.length){ // Groups of words "p- tag groups"
+                ticker.innerHTML = currWordGroup[inner];
+                inner +=1
+            } else {
+                inner = 0;
+                outer += 1;
+            }
 
-
-	var currWordGroup = Array_Words[outer];
-	if(inner < currWordGroup.length){ // Groups of words "p- tag groups"
-		ticker.innerHTML = currWordGroup[inner];
-		inner +=1
-	} else {
-		inner = 0;
-		outer += 1;
-	}
-
-}, 200);
-
-
-
-
-//window.onload = function()
-//setTimeout(function() {
-/*
-	for(var i = 0; i < Array_Words.length; i++){
-
-		for (var j = 0; j < Array_Words[i].length; j++){
-
-  	if(Array_Words[i][j].length < 1){
-		//console.log("yep");
-		}
-		else{
-
-
-		setInterval(function() {
-			//console.log("Success!");
-		// Commented this out just for testing purposes:
-			console.log("I: " + i  + "J :" + j);
-			console.log(Array_Words[i][j]);
-			ticker.innerHTML = Array_Words[i][j];
-			//main.style.display = "none";
-			//main.style.displau = "inherit";
-			//console.log(typeof Array_Words[i][j]);
-		//chrome.tabs.insertCSS(null, {file:"/styles.css", runAt: "document_start"});
-			//location.reload();
-			//window.width();
-			//sleep(0);
-			//window.clearInterval()
-				//main.innerHTML = Array_Words[i][j];
-				//console.log(typeof Array_Words[i][j]);
-
-		//location.reload();
-		}, 2000);
-		//console.log(Array_Words[i][j]);
-   }
-	}
-=======
-
->>>>>>> 8c594a06719b987bab36e09a517a7efd4896f759
+        }, 200);
+    } else {
+        clearInterval(Timer);
+    }
 }
-//}
-
-
-
-main.innerHTML = article_text[2].innerHTML;
-
-<<<<<<< HEAD
-//},100);
-/*
-for (var j = 1; j < Array_Words.length; j++){
-  if(Array_Words[j].length < 1){
-		continue;
-	}
-	else{
-	setInterval(function() {
-	main.innerHTML = Array_Words[j];
-	}, 2000);
-
-	console.log(Array_Words[j]);
-   }
-}
-*/
-//console.log(Array_Words);
-
-
-
-
-
-
-
-
-
-
 
 console.log(article_text[2].innerHTML);
