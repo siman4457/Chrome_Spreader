@@ -12,9 +12,18 @@ html, body {
 }
 
 p {
-	display:inherit!important;
+	display:block!important;
 }
 
+i {
+	display:inherit!important;
+}
+/*
+a,h*{
+	display:inherit!important;
+
+}
+*/
 .main  {
 	display:inherit!important;
 
