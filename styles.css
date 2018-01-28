@@ -1,3 +1,261 @@
-body {
-  background: white !important;
+
+* {
+	visibility: hidden;
+}
+
+
+html, body {
+	visibility:visible !important;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+  background-color: rgb(225,225,225);
+}
+
+p {
+	visibility:visible !important;
+}
+
+
+.main {
+	visibility:visible !important;
+  box-shadow: 2px 2px 50px 5px;
+	background-color: white;
+	height:200px;
+  width: 55%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.supporting {
+	visibility:visible !important;
+  box-shadow: 2px 2px 50px 5px;
+  background-color: white;
+  height: 450px;
+  width: 55%;
+  margin: 0 auto;
+  border-radius: 10px;
+  word-wrap: break-word;
+  margin-top: 30px;
+  font-size: 15px;
+  overflow-y: auto;
+  text-align: justify;
+
+}
+
+.supporting .text {
+	visibility:visible !important;
+
+  padding: 40px 40px 40px 40px;
+}
+
+
+/* Make emojis and icons a reasonable */
+[class *= "emoji"],
+[class *= "icon"] { width: 1em; }
+
+/* Hide scripts */
+script {
+    display: none;
+}
+
+/* Hide some things I dislike seeing when I read articles */
+/* Very simple ad hider */
+[class = "ad"],
+[class *= "ads"],
+[class ^= "ad-"],
+[class ^= "ad_"],
+[class *= "-ad-"],
+[class $= "-ad"],
+[class $= "_ad"],
+[class ~= "ad"] {
+    display: none;
+}
+
+/* Very simple nav, menu, and search hider */
+[class *= "navigation"],
+[class *= "nav"],
+nav,
+[class *= "search"],
+[class *= "menu"],
+[class *= "print"]:not(.simple-print) {
+    display: none;
+}
+
+/* Very simple 'nocontent' hider */
+[class *= "nocontent"],
+.hidden {
+    display: none;
+}
+
+/* Very simple popup hider */
+[class *= "popup"] {
+    display: none;
+}
+
+/* Very simple sharing hider */
+[class *= "share"],
+[class *= "sharing"],
+[class *= "social"],
+[class *= "follow"],
+[class *= "newsletter"] {
+    display: none;
+}
+
+/* Very simple meta hider */
+[class *= "meta"]:not(.simple-meta),
+[class *= "author"]:not(".simple-author"),
+[id *= "author"] {
+    display: none;
+}
+
+/* Very simple form hider */
+form,
+[class ^= "form-"],
+[class ^= "form"],
+[class *= "-form-"],
+[class $= "-form"],
+[class $= "form"],
+[class ~= "form"]{
+    display: none;
+}
+
+/* Very simple related/recommended hider */
+[class *= "related"],
+[class *= "recommended"],
+[class *= "see-also"],
+[class *= "popular"],
+[class *= "trail"] {
+    display: none;
+}
+
+/* Very simple comments hider */
+[class *= "comment"],
+[class *= "disqus"],
+[id *= "disqus"] {
+    display: none;
+}
+
+/* Very simple tags hider */
+[class ^= "tag"],
+[class *= "-tag-"],
+[class $= "-tag"],
+[class $= "_tag"],
+[class ~= "tag"],
+[class *= "-tags-"],
+[class $= "-tags"],
+[class $= "_tags"],
+[class ~= "tags"],
+[id *= "-tags-"],
+[id $= "-tags"],
+[id $= "_tags"],
+[id ~= "tags"] {
+    display: none;
+}
+
+/* Very simple subscribe/subscription hider */
+[class *= "subscribe"],
+[id *= "subscribe"],
+[class *= "subscription"],
+[id *= "subscription"] {
+    display: none;
+}
+
+/* Very simple fav/favorites hider */
+[class ^= "fav"],
+[class *= "-fav-"],
+[class $= "-fav"],
+[class $= "_fav"],
+[class ~= "fav"],
+[id ^= "fav"],
+[id *= "-fav-"],
+[id $= "-fav"],
+[id $= "_fav"],
+[id ~= "fav"],
+[class *= "favorites"],
+[id *= "favorites"] {
+    display: none;
+}
+
+/* Very simple signup/signin hider */
+[class *= "signup"],
+[id *= "signup"],
+[class *= "signin"],
+[id *= "signin"],
+[class *= "signIn"],
+[id *= "signIn"] {
+    display: none;
+}
+
+/* Very simple footer hider */
+footer,
+[class *= "footer"],
+[id *= "footer"] {
+    display: none;
+}
+
+
+/* Hide SVGs that use particular site names (usually icons) */
+svg[class *= "pinterest"],
+[class *= "pinterest"] svg,
+svg[id *= "pinterest"],
+[id *= "pinterest"] svg,
+svg[class *= "pinit"],
+[class *= "pinit"] svg,
+svg[id *= "pinit"],
+[id *= "pinit"] svg,
+svg[class *= "facebook"],
+[class *= "facebook"] svg,
+svg[id *= "facebook"],
+[id *= "facebook"] svg,
+svg[class *= "github"],
+[class *= "github"] svg,
+svg[id *= "github"],
+[id *= "github"] svg,
+svg[class *= "twitter"],
+[class *= "twitter"] svg,
+svg[id *= "twitter"],
+[id *= "twitter"] svg,
+svg[class *= "instagram"],
+[class *= "instagram"] svg,
+svg[id *= "instagram"],
+[id *= "instagram"] svg,
+svg[class *= "tumblr"],
+[class *= "tumblr"] svg,
+svg[id *= "tumblr"],
+[id *= "tumblr"] svg,
+svg[class *= "youtube"],
+[class *= "youtube"] svg,
+svg[id *= "youtube"],
+[id *= "youtube"] svg,
+svg[class *= "codepen"],
+[class *= "codepen"] svg,
+svg[id *= "codepen"],
+[id *= "codepen"] svg,
+svg[class *= "dribble"],
+[class *= "dribble"] svg,
+svg[id *= "dribble"],
+[id *= "dribble"] svg,
+svg[class *= "soundcloud"],
+[class *= "soundcloud"] svg,
+svg[id *= "soundcloud"],
+[id *= "soundcloud"] svg,
+svg[class *= "rss"],
+[class *= "rss"] svg,
+svg[id *= "rss"],
+[id *= "rss"] svg,
+svg[class *= "linkedin"],
+[class *= "linkedin"] svg,
+svg[id *= "linkedin"],
+[id *= "linkedin"] svg,
+svg[class *= "vimeo"],
+[class *= "vimeo"] svg,
+svg[id *= "vimeo"],
+[id *= "vimeo"] svg,
+svg[class *= "email"],
+[class *= "email"] svg,
+svg[id *= "email"],
+[id *= "email"] svg {
+    display: none;
 }
