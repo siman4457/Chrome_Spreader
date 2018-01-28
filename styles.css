@@ -8,26 +8,15 @@ html, body {
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
-  background-color: rgb(225,225,225);
+  background-color: white;
 }
 
 p {
-	display:block!important;
-}
-
-i {
 	display:inherit!important;
 }
-/*
-a,h*{
-	display:inherit!important;
 
-}
-*/
 .main  {
 	display:inherit!important;
-
-
   position: fixed;
   right: 0;
   left: 0;
@@ -41,9 +30,66 @@ a,h*{
   text-align: center;
 }
 
+.buttonT {
+	display:block!important;
+	position: fixed;
+	margin: 120px 0px 0px 27px;
+	height: 17px;
+	width: 60px;
+	border-radius: 10px;
+	background-color: rgba(225,225,225,.6);
+	z-index: 9999;
+	color: black;
+	text-align: center;
+}
+
+.buttonB {
+	display:block!important;
+	position: fixed;
+	margin: 170px 0px 0px 27px;
+	height: 17px;
+	width: 60px;
+	border-radius: 10px;
+	background-color: rgba(225,225,225,.6);
+	z-index: 9999;
+	color: black;
+
+}
+
+.PlayPause {
+	display:block!important;
+	position: fixed;
+	margin: 145px 0px 0px 10px;
+	height: 17px;
+	width: 100px;
+	border-radius: 10px;
+	background-color: rgba(225,225,225,.6);
+	z-index: 9999;
+	color: black;
+	text-align: center;
+}
+
+.PlayPause:hover {
+	color: white;
+	background-color: black;
+}
+.buttonT:hover {
+	color: white;
+	background-color: black;
+}
+
+.buttonB:hover {
+	color: white;
+	background-color: black;
+}
+
+
 .main #scrolltext {
-  font-size: 80px;
-  margin-top: 50px;
+  font-size: 65px;
+  margin: 0 auto;
+	margin-top: 80px;
+	color: black;
+	font-family:sans-serif;
 }
 
 .leftline {
@@ -80,7 +126,7 @@ a,h*{
   position: relative;
   box-shadow: 2px 2px 50px 5px;
   background-color: white;
-  height: auto;
+
   width: 55%;
   border-radius: 10px;
   margin: 0 auto;
@@ -90,9 +136,12 @@ a,h*{
   text-align: justify;
   top: 240px;
 
+
 }
 
 .supporting .text {
 	display:inherit!important;
-  padding: 40px 40px 40px 40px;
+  padding: 40px 40px 100px 40px;
+	height: auto;
+	color: black;
 }

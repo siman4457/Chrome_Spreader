@@ -1,18 +1,28 @@
-
 /*
 var file = location.pathname.split( "/" ).pop();
-
 var link = document.createElement( "link" );
 link.href = "styles.css";
 link.type = "text/css";
 link.rel = "stylesheet";
 link.media = "screen,print";
-
 document.getElementsByTagName( "head" )[0].appendChild( link );
 */
 
 var main = document.createElement("div");
 main.className += "main";
+
+var buttonT = document.createElement("div");
+buttonT.className += "buttonT";
+
+
+
+var buttonB = document.createElement("div");
+buttonB.className += "buttonB";
+
+var PlayPause = document.createElement("div");
+PlayPause.className += "PlayPause";
+
+
 
 var article = document.createElement("div");
 article.className += "supporting";
@@ -25,8 +35,18 @@ ticker.id += "scrolltext"
 
 document.getElementsByTagName("body")[0].appendChild(main);
 document.getElementsByTagName("body")[0].appendChild(article);
+document.getElementsByTagName("body")[0].appendChild(buttonT);
+document.getElementsByTagName("body")[0].appendChild(buttonB);
+document.getElementsByTagName("body")[0].appendChild(PlayPause);
+main.appendChild(buttonT);
+main.appendChild(buttonB);
+main.appendChild(PlayPause);
 article.appendChild(stuff);
+main.appendChild(ticker);
 
+buttonT.innerHTML = "Faster";
+buttonB.innerHTML = "Slower";
+PlayPause.innerHTML = "Play/Pause";
 
 
 
@@ -47,19 +67,18 @@ for(i = 0; i < article_text.length; i++) {
 	console.log(p_list);
 	//document.getElementsByClassName("text")[0].appendChild(x[i]);
 	//stuff.appendChild(p_list);
-
 	stuff.innerHTML += p_list.innerHTML;
-	//stuff.innerHTML += "\n";
 	/*
 	for(var i = 0; i <= x[i].children.length; i++){
 		x[i].style.display = "inherit";
 	}
 	*/
 
+
 	par_string = p_list.innerHTML;
  	Array_Words.push(par_string.split(" "));
 
-};
+}
 
 
 
@@ -101,9 +120,9 @@ for (j = 1; j < Array_Words.length; j++){
 */
 
 // Function developed so that 'Scheduler' could be used.
-
+/*
 function printToScreen(){
-	main.innerHTML = Array_Words[i][j];
+	ticker.innerHTML = Array_Words[i][j];
 			main.style.display = "none";
 			main.style.display = "inherit";
 }
@@ -117,47 +136,80 @@ function sleep(milliseconds) {
   }
 }
 
+*/
+var inner =0;
+var outer =0;
 
-//window.onload = function() {
 
-setTimeout(function() {
-
-
-for(i = 0; i < Array_Words.length; i++){
-
-	for (j = 0; j < Array_Words[i].length; j++){
-  if(Array_Words[i][j].length < 1){
-		continue;
+var Timer = setInterval(function(){
+	if(outer >= Array_Words.length){
+		// We're done
+		clearInterval(Timer);
+		return;
 	}
-	else{
 
-		//setTimeout(function() {
-				//console.log("Success!");
+
+	var currWordGroup = Array_Words[outer];
+	if(inner < currWordGroup.length){ // Groups of words "p- tag groups"
+		ticker.innerHTML = currWordGroup[inner];
+		inner +=1
+	} else {
+		inner = 0;
+		outer += 1;
+	}
+
+}, 200);
+
+
+
+
+//window.onload = function()
+//setTimeout(function() {
+/*
+	for(var i = 0; i < Array_Words.length; i++){
+
+		for (var j = 0; j < Array_Words[i].length; j++){
+
+  	if(Array_Words[i][j].length < 1){
+		//console.log("yep");
+		}
+		else{
+
+
+		setInterval(function() {
+			//console.log("Success!");
 		// Commented this out just for testing purposes:
-			//main.innerHTML = Array_Words[i][j];
+			console.log("I: " + i  + "J :" + j);
+			console.log(Array_Words[i][j]);
+			ticker.innerHTML = Array_Words[i][j];
 			//main.style.display = "none";
 			//main.style.displau = "inherit";
-			console.log(typeof Array_Words[i][j]);
+			//console.log(typeof Array_Words[i][j]);
 		//chrome.tabs.insertCSS(null, {file:"/styles.css", runAt: "document_start"});
 			//location.reload();
 			//window.width();
-		  setInterval(printToScreen(),60000);
-		main.style.display = "none";
-			main.style.display = "inherit";
 			//sleep(0);
 			//window.clearInterval()
 				//main.innerHTML = Array_Words[i][j];
 				//console.log(typeof Array_Words[i][j]);
 
 		//location.reload();
-		//}, 2000);
+		}, 2000);
 		//console.log(Array_Words[i][j]);
    }
 	}
+=======
+
+>>>>>>> 8c594a06719b987bab36e09a517a7efd4896f759
 }
 //}
 
-},5000);
+
+
+main.innerHTML = article_text[2].innerHTML;
+
+<<<<<<< HEAD
+//},100);
 /*
 for (var j = 1; j < Array_Words.length; j++){
   if(Array_Words[j].length < 1){
@@ -173,3 +225,15 @@ for (var j = 1; j < Array_Words.length; j++){
 }
 */
 //console.log(Array_Words);
+
+
+
+
+
+
+
+
+
+
+
+console.log(article_text[2].innerHTML);
