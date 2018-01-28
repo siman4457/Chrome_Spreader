@@ -29,7 +29,7 @@ article.appendChild(stuff);
 
 
 
-var x = document.getElementsByTagName('p');
+var article_text = document.getElementsByTagName('p');
 
 
 /*
@@ -37,15 +37,14 @@ var bod = document.getElementsByTagName('body');
 var entire = document.getElementsByTagName('html');
 */
 
-	console.log("wax")
 
-for(i = 0; i < x.length; i++) {
-	console.log(i)
+for(i = 0; i < article_text.length; i++) {
 	//Not needed and unnecessary:
-	let thing = x[i];
-	console.log(thing);
+	let p_list = article_text[i];
+	console.log(p_list);
 	//document.getElementsByClassName("text")[0].appendChild(x[i]);
-	stuff.appendChild(thing);
+	//stuff.appendChild(p_list);
+	stuff.innerHTML += p_list.innerHTML;
 	/*
 	for(var i = 0; i <= x[i].children.length; i++){
 		x[i].style.display = "inherit";
@@ -53,6 +52,16 @@ for(i = 0; i < x.length; i++) {
 	*/
 	
 }
+
+main.innerHTML = article_text[2].innerHTML;
+
+console.log(article_text[2].innerHTML);
+
+
+
+
+
+
 
 
 
