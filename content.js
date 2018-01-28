@@ -40,10 +40,8 @@ var par_string = " ";
 var Array_Words = [];
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 8c594a06719b987bab36e09a517a7efd4896f759
+
 for(i = 0; i < article_text.length; i++) {
 	//Not needed and unnecessary:
 	var p_list = article_text[i];
@@ -51,16 +49,13 @@ for(i = 0; i < article_text.length; i++) {
 	//document.getElementsByClassName("text")[0].appendChild(x[i]);
 	//stuff.appendChild(p_list);
 	stuff.innerHTML += p_list.innerHTML;
-<<<<<<< HEAD
 	//stuff.innerHTML += "\n";
-=======
->>>>>>> 8c594a06719b987bab36e09a517a7efd4896f759
+
 	/*
 	for(var i = 0; i <= x[i].children.length; i++){
 		x[i].style.display = "inherit";
 	}
 	*/
-<<<<<<< HEAD
 	
 	par_string = p_list.innerHTML;
  	Array_Words.push(par_string.split(" "));
@@ -215,13 +210,3 @@ for (var j = 1; j < Array_Words.length; j++){
 
 
 
-
-
-
-
-
-
-
-=======
-console.log(article_text[2].innerHTML);
->>>>>>> 8c594a06719b987bab36e09a517a7efd4896f759
