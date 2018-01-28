@@ -138,12 +138,43 @@ var inner =0;
 var outer =0;
 var pressed = false;
 var Timer;
+var Time = 1000;
+
 
 PlayPause.onclick = function(event){
-    console.log("click")
+    console.log("click");
     pressed = !pressed;
     startTextScroll();
 };
+
+buttonB.onclick = function(event){
+	console.log("clicked slower");
+	slower();
+}
+
+buttonT.onclick = function(event){
+	console.log("clicked faster");
+	faster();
+}
+
+function slower(){
+		clearInterval(Timer);
+		Time += 200;
+		startTextScroll();
+		console.log("Slowed Down by 1 Second!");
+}
+
+function faster(){
+	clearInterval(Timer);
+	if(Time <= 200){
+			alert("Already at fastest speed!");
+	}
+	else{
+		Time -= 200;			
+		startTextScroll();
+		console.log("Sped Up by 1 Second!");
+	}
+}
 
 function startTextScroll() {
     if (pressed){
@@ -165,7 +196,7 @@ function startTextScroll() {
                 outer += 1;
             }
 
-        }, 200);
+        }, Time);
     } else {
         clearInterval(Timer);
     }
