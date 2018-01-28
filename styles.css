@@ -1,15 +1,23 @@
-
+* {
+	display: none;
+}
 
 html, body {
+	display:inherit!important;
+
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
   background-color: rgb(225,225,225);
 }
 
-
+p {
+	display:inherit!important;
+}
 
 .main  {
+	display:inherit!important;
+
 
   position: fixed;
   right: 0;
@@ -30,6 +38,7 @@ html, body {
 }
 
 .leftline {
+	display:inherit!important;
 
   height: 150px;
   width: 4px;
@@ -43,6 +52,7 @@ html, body {
 }
 
 .rightline {
+	display:inherit!important;
 
   height: 150px;
   width: 4px;
@@ -57,6 +67,7 @@ html, body {
 }
 
 .supporting {
+	display:inherit!important;
   position: relative;
   box-shadow: 2px 2px 50px 5px;
   background-color: white;
@@ -73,5 +84,8 @@ html, body {
 }
 
 .supporting .text {
+	display:inherit!important;
   padding: 40px 40px 40px 40px;
 }
+
+

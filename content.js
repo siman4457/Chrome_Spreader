@@ -1,5 +1,15 @@
 
 
+var file = location.pathname.split( "/" ).pop();
+
+var link = document.createElement( "link" );
+link.href = "styles.css";
+link.type = "text/css";
+link.rel = "stylesheet";
+link.media = "screen,print";
+
+document.getElementsByTagName( "head" )[0].appendChild( link );
+
 
 var main = document.createElement("div");
 main.className += "main";
@@ -24,9 +34,13 @@ var bod = document.getElementsByTagName('body');
 var entire = document.getElementsByTagName('html');
 
 for(i = 0; i <= x.length; i++){
+	
+	//Not needed and unnecessary:
 	let thing = x[i];
 	console.log(thing);
 	document.getElementsByClassName("text")[0].appendChild(x[i]);
+	
+	//document.getElementsByClassName("text")[0].appendChild(x[i]);
 }
 
 
