@@ -1,4 +1,4 @@
-# Chrome_Spreader
+# Slurp
 
 
 GitHub Details
@@ -28,5 +28,5 @@ Project Details
 --------------
 
   > - Chrome Extension
-  > - JavaScript (& HTML?, CSS?)
+  > - JavaScript, HTML, CSS
   > - Started at TamuHack 2018
