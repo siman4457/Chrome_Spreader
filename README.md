@@ -1,5 +1,6 @@
 # Slurp
 
+Slurp is a multi purpose speed reading google chrome extension. The extension not only trains users to read faster, but also serves as a clean reading environment that aids people who are visually impaired by providing enlarged text. Slurp is currently prone to bugs and is still under developent. 
 
 GitHub Details
 --------------
