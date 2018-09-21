@@ -33,4 +33,4 @@ Project Details
 
   > - Chrome Extension
   > - JavaScript, HTML, CSS
-  > - Started at TamuHack 2018
+  > - Started and completed at TamuHack 2018
